@@ -7,12 +7,12 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 @pytest.fixture
-def user(db):
+def user():
     user = User.objects.create_user(username='testuser', password='testpassword')
     return user
 
 @pytest.fixture
-def post(db, user):
+def post(user):
     post = Post.objects.create(title='Test Post', content='This is a test post', user=user)
     return post
 

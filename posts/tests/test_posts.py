@@ -1,4 +1,3 @@
-# posts/tests/test_crud.py
 import pytest
 from django.urls import reverse
 from rest_framework import status
@@ -49,7 +48,7 @@ def test_update_post(api_client, user, post):
     assert post.title == 'Updated Title'
 
 @pytest.mark.django_db
-def test_update_post_not_author(api_client, user, post):
+def test_update_post_not_author(api_client, post):
     other_user = User.objects.create_user(username='otheruser', password='password')
     api_client.force_authenticate(user=other_user)
     url = reverse('post-detail', args=[post.id])
@@ -66,7 +65,7 @@ def test_delete_post(api_client, user, post):
     assert Post.objects.count() == 0
 
 @pytest.mark.django_db
-def test_delete_post_not_author(api_client, user, post):
+def test_delete_post_not_author(api_client, post):
     other_user = User.objects.create_user(username='otheruser', password='password')
     api_client.force_authenticate(user=other_user)
     url = reverse('post-detail', args=[post.id])
