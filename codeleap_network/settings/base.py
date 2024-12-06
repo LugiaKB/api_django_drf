@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+from datetime import timedelta
 from pathlib import Path
 from dotenv import load_dotenv
 import os
@@ -42,8 +43,10 @@ INSTALLED_APPS = [
     # external
     "rest_framework",
     "drf_spectacular",
+    "django_filters",
     # internal
     "accounts",
+    "posts",
 ]
 
 MIDDLEWARE = [
@@ -130,9 +133,10 @@ REST_FRAMEWORK = {
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "CodeLeap Network API",
+    "DESCRIPTION": "API documentation for CodeLeap Network",
+    "VERSION": "1.0.0",
 }
 
-from datetime import timedelta
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),  
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),     

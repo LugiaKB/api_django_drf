@@ -11,6 +11,7 @@ python-dotenv = "*"
 pytest = "*"
 pytest-django = "*"
 djangorestframework-simplejwt = "*"
+django-filter = "*"
 
 [dev-packages]
 
