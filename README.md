@@ -5,13 +5,17 @@ This project was created with Django 5.1.4 and Python 3.11.4
 Install `pipenv` globally on your computer with:  
 ```bash
 pip install --user pipenv
-```  
-Run `pipenv install` to create a Python virtual environment for this project and install all dependencies from the `Pipfile`.  
-Run 
+```
+
+To create a Python virtual environment for this project and install all dependencies from the `Pipfile`, run: 
+```bash
+pipenv install
+```
+  
+To activate it, run:
 ```bash
 pipenv shell
 ``` 
-to activate it.
 
 ## Create your environment variables
 Create a file named `.env` and fill it as the `.env.example` file indicates.  
