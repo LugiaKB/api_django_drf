@@ -4,14 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "*"
-djangorestframework = "*"
-drf-spectacular = "*"
-python-dotenv = "*"
-pytest = "*"
-pytest-django = "*"
-djangorestframework-simplejwt = "*"
-django-filter = "*"
+django = "==5.1.4"
+djangorestframework = "==3.15.2"
+drf-spectacular = "==0.28.0"
+python-dotenv = "==1.0.1"
+pytest = "==8.3.4"
+pytest-django = "==4.9.0"
+djangorestframework-simplejwt = "==5.3.1"
+django-filter = "==24.3"
 
 [dev-packages]
 
